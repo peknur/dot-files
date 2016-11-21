@@ -15,5 +15,13 @@ set laststatus=2
 set number
 set cursorline
 
+" Symfony twig files
 au BufRead,BufNewFile *.twig set filetype=html
+
+" Python helpers
+autocmd BufWritePre *.py :%s/\s\+$//e
+au BufEnter *.py if getline(1) == "" | :call setline(1, "#!/usr/bin/env python") | endif
+au BufEnter *.py if getline(2) == "" | :call setline(2, "# -*- coding: utf-8 -*-") | endif
+
+
 map <F5> :!php -l %<CR>
