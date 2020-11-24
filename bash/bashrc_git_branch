@@ -2,7 +2,7 @@
 
 function git_branch {
     if [ -d "./.git" ]; then
-        printf "/.%s " $(git branch |sed -nr 's/^\* //p')
+        printf " {%s} " $(git branch |sed -nr 's/^\* //p')
     fi
 }
 
