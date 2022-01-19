@@ -13,7 +13,6 @@ set statusline+=/
 set statusline+=%L  
 set laststatus=2
 set autochdir
-set number
 
 " Alias 
 au BufRead,BufNewFile *.pkr.hcl set filetype=tf
