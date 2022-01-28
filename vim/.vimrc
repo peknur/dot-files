@@ -21,3 +21,4 @@ au BufRead,BufNewFile *.pkr.hcl set filetype=tf
 autocmd BufEnter *.php map <F5> :!php -l %<CR>
 autocmd BufEnter *.go map <F5> :!gofmt -w -e -s %<CR>
 autocmd BufEnter *.pkr.hcl map <F5> :%!packer fmt -<CR>
+autocmd BufEnter *.tf map <F5> :%!terraform fmt -<CR>
